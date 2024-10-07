@@ -21,9 +21,6 @@ namespace HOST_Telery.Models
         [Column("employee_lastName")]
         public string LastName { get; set; }
 
-        [Column("employee_phoneNumber")]
-        public string PhoneNumber { get; set; }
-
         [Column("employee_email")]
         public string Email { get; set; }
 
