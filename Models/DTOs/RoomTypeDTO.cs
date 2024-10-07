@@ -14,5 +14,6 @@ namespace HOST_Telery.Models.DTOs
         [Required]
         [MaxLength(255)]
         public string description {get; set;}
+        
     }
 }

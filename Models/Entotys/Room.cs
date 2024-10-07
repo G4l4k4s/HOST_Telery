@@ -34,5 +34,15 @@ namespace HOST_Telery.Models
         [JsonIgnore]
         [ForeignKey("RoomTypeId")]
         public RoomType RoomType { get; set; }
+
+
+        public Room (String roomNumber, int roomTypeId, double pricePerNight, bool availavility, byte maxOccupancyPerPerson)
+        {
+            RoomNumber = roomNumber.ToLower().Trim();
+            RoomTypeId = roomTypeId;
+            PricePerNight = pricePerNight;
+            Availavility = availavility;
+            MaxOccupancyPerPerson = maxOccupancyPerPerson;
+        }
     }
 }

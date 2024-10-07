@@ -23,5 +23,6 @@ namespace HOST_Telery.Models.DTOs
 
         [Required]
         public byte MaxOccupancyPerPerson { get; set; }
+
     }
 }

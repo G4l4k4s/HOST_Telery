@@ -13,12 +13,18 @@ namespace HOST_Telery.Models
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Column("id")]
-        public int Id {get; set;}
+        public int Id { get; set; }
 
         [Column("room_type_name")]
-        public string name {get; set;}
+        public string Name { get; set; }
 
         [Column("room_description")]
-        public string description {get; set;}
+        public string Description { get; set; }
+
+        public RoomType(string name, string description)
+        {
+            Name = name.Trim().ToLower();
+            Description = description.Trim().ToLower();
+        }
     }
 }

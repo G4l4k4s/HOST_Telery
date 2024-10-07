@@ -29,5 +29,14 @@ namespace HOST_Telery.Models
 
         [Column("employee_password")]
         public string Password { get; set; }
+
+        public Employee(string firstName, string lastName, string email, string identityNumber, string password)
+        {
+            FirstName = firstName.ToLower().Trim();
+            LastName = lastName.ToLower().Trim();
+            Email = email.ToLower().Trim();
+            IdentificationNumber = identityNumber.ToLower().Trim();
+            Password = password;
+        }
     }
 }
