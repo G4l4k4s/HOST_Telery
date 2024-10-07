@@ -31,9 +31,6 @@ namespace HOST_Telery.Models
         [Column("max_occupancy_per_sperson")]
         public byte MaxOccupancyPerPerson { get; set; }
 
-        [Column("room_maxOccupancyPersons")]
-        public byte MaxOccupancyPerspons { get; set; }
-
         [JsonIgnore]
         [ForeignKey("RoomTypeId")]
         public RoomType RoomType { get; set; }
