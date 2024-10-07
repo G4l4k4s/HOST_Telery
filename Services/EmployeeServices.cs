@@ -45,6 +45,11 @@ namespace HOST_Telery.Services
             return await _context.Set<Employee>().FindAsync(id);
         }
 
+        public async Task<Employee?> GetByEmail(string email)
+        {
+            return await _context.Employees.FirstOrDefaultAsync(u => u.Email == email);
+        }
+
         public async Task Update(Employee employee)
         {
             _context.Entry(employee).State = EntityState.Modified;

@@ -2,25 +2,20 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using HOST_Telery.Data;
 using HOST_Telery.Repository;
 using Microsoft.AspNetCore.Mvc;
 
 namespace HOST_Telery.Controllers.v1.BookingControllers
 {
-
     [ApiController]
-    [Route("api/v1/category")]
+    [Route("api/[controller]")]
     [Tags("booking")]
-
-    public class BookingController : ControllerBase
+    public class BookingDeleteController : BookingController
     {
-        protected readonly IBookingRepository servicios;
-
-        public BookingController(IBookingRepository bookingRepository)
+        public BookingDeleteController(IBookingRepository bookingRepository) : base(bookingRepository)
         {
-            servicios = bookingRepository;
         }
+
 
     }
 }

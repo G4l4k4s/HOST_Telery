@@ -43,5 +43,10 @@ namespace HOST_Telery.Config
 
             return new JwtSecurityTokenHandler().WriteToken(token);
         }
+
+        internal static object GenerateJwtToken(Employee employee)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

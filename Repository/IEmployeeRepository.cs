@@ -10,6 +10,7 @@ namespace HOST_Telery.Repository
     {
         Task<IEnumerable<Employee>> GetAll();
         Task<Employee> GetEmployeeById(int id);
+        Task<Employee?> GetByEmail(string email);
         Task Add(Employee employee);
         Task Update(Employee employee);
         Task Delete(int id);

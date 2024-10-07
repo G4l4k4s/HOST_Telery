@@ -33,14 +33,14 @@ namespace HOST_Telery.Models
         [Column("guest_arrivalDate")]
         public DateTime BirthDate { get; set; }
 
-        public Guest (string firstName, string lastName, string email, string identificationNumber, string phoneNumber, DateTime birthday)
+        public Guest (string firstName, string lastName, string email, string identificationNumber, string phoneNumber, DateTime birthDate)
         {
             FirstName = firstName.ToLower().Trim();
             LastName = lastName.ToLower().Trim();
             Email = email.ToLower().Trim();
             IdentificationNumber = identificationNumber.ToLower().Trim();
             PhoneNumber = phoneNumber.Trim();
-            BirthDate = birthday;
+            BirthDate = birthDate;
         }
 
     }
